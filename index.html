@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jaewon's Hub</title>
+  <style>
+    /* 기본 스타일 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f7f7f7;
+      overflow-x: hidden;
+    }
+
+    /* Top Bar 스타일 */
+    .top-bar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      z-index: 100;
+      backdrop-filter: blur(10px); /* 블러 효과 */
+    }
+
+    .top-bar nav ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    .top-bar nav ul li {
+      margin: 0 20px;
+    }
+
+    .top-bar nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    .top-bar nav ul li a:hover {
+      color: #ff6347; /* Hover 시 색상 */
+    }
+
+    /* 메인 콘텐츠 */
+    .main-content {
+      text-align: center;
+      padding-top: 100px; /* 탑바 아래에서 시작 */
+      padding-bottom: 50px;
+      background: url('https://via.placeholder.com/1500x1000') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      backdrop-filter: blur(5px); /* 배경 블러 */
+    }
+
+    .main-content h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .main-content p {
+      font-size: 1.2rem;
+    }
+
+    /* 다이노 버튼 스타일 */
+    .footer {
+      position: fixed;
+      bottom: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .dino-button {
+      padding: 15px 30px;
+      font-size: 18px;
+      color: white;
+      background-color: #ff6347;
+      border: none;
+      border-radius: 50px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .dino-button:hover {
+      background-color: #ff4500;
+      transform: scale(1.1); /* Hover 시 크기 변화 */
+    }
+
+    .dino-button:active {
+      transform: scale(1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header class="top-bar">
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <section class="main-content">
+    <h1>Welcome to Jaewon's Hub!</h1>
+    <p>여기에 당신만의 멋진 페이지 내용이 들어갑니다. 블러 효과와 함께 꾸며봅시다!</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <button class="dino-button" onclick="window.location.href='dino.html';">
+      다이노
+    </button>
+  </footer>
+
+  <script>
+    // 다이노 버튼 클릭 시 페이지 이동 기능
+    document.querySelector('.dino-button').addEventListener('click', function() {
+      window.location.href = 'dino.html';  // 'dino.html'로 이동
+    });
+  </script>
+
+</body>
+</html>
